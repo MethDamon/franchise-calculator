@@ -20,9 +20,9 @@
         <h2 id="expenses-heading"><label for="expenses">Projected yearly medical expenses</label></h2>
         <div class="amount-input">
           <span aria-hidden="true">CHF</span>
-          <input id="expenses" name="expenses" type="number" min="0" step="0.01" value="2000" required inputmode="decimal" aria-describedby="expenses-note">
+          <input id="expenses" name="expenses" type="number" min="0" step="0.01" inputmode="decimal" aria-describedby="expenses-note">
         </div>
-        <p id="expenses-note" class="muted">Covered medical costs before insurance reimbursement.</p>
+        <p id="expenses-note" class="muted">Optional for expense ranges; enter covered medical costs to compare yearly totals.</p>
       </section>
 
       <section aria-labelledby="comparison-heading">
@@ -36,15 +36,16 @@
                 <th scope="col">Annual premium</th>
                 <th scope="col">Medical costs you pay</th>
                 <th scope="col">Yearly total</th>
+                <th scope="col">Lowest-cost expense range</th>
               </tr>
             </thead>
             <tbody>
-              <tr data-franchise="300"><th scope="row">CHF 300</th><td><input aria-label="Monthly premium for CHF 300 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-300"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td></tr>
-              <tr data-franchise="500"><th scope="row">CHF 500</th><td><input aria-label="Monthly premium for CHF 500 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-500"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td></tr>
-              <tr data-franchise="1000"><th scope="row">CHF 1,000</th><td><input aria-label="Monthly premium for CHF 1000 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-1000"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td></tr>
-              <tr data-franchise="1500"><th scope="row">CHF 1,500</th><td><input aria-label="Monthly premium for CHF 1500 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-1500"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td></tr>
-              <tr data-franchise="2000"><th scope="row">CHF 2,000</th><td><input aria-label="Monthly premium for CHF 2000 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-2000"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td></tr>
-              <tr data-franchise="2500"><th scope="row">CHF 2,500</th><td><input aria-label="Monthly premium for CHF 2500 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-2500"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td></tr>
+              <tr data-franchise="300"><th scope="row">CHF 300</th><td><input aria-label="Monthly premium for CHF 300 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-300"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td><td data-range>Not entered</td></tr>
+              <tr data-franchise="500"><th scope="row">CHF 500</th><td><input aria-label="Monthly premium for CHF 500 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-500"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td><td data-range>Not entered</td></tr>
+              <tr data-franchise="1000"><th scope="row">CHF 1,000</th><td><input aria-label="Monthly premium for CHF 1000 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-1000"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td><td data-range>Not entered</td></tr>
+              <tr data-franchise="1500"><th scope="row">CHF 1,500</th><td><input aria-label="Monthly premium for CHF 1500 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-1500"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td><td data-range>Not entered</td></tr>
+              <tr data-franchise="2000"><th scope="row">CHF 2,000</th><td><input aria-label="Monthly premium for CHF 2000 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-2000"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td><td data-range>Not entered</td></tr>
+              <tr data-franchise="2500"><th scope="row">CHF 2,500</th><td><input aria-label="Monthly premium for CHF 2500 franchise" type="number" min="0" step="0.01" inputmode="decimal" placeholder="CHF" name="premium-2500"></td><td data-annual>Not entered</td><td data-medical>Not entered</td><td data-total>Not entered</td><td data-range>Not entered</td></tr>
             </tbody>
           </table>
         </div>
@@ -59,6 +60,7 @@
     <footer>
       <h2>Calculation assumptions</h2>
       <p>Yearly total = 12 monthly premiums + medical expenses up to the franchise + 10% of expenses above it, capped at CHF 700 per year.</p>
+      <p>Expense ranges show where each entered franchise has the lowest yearly total; options without a monthly premium are excluded. Break-even amounts are ties.</p>
       <p class="muted">Adult franchises. Estimate only: uncovered treatments, hospital contributions and other charges are not included. The lowest cost depends on your actual expenses and premiums.</p>
     </footer>
   </main>
