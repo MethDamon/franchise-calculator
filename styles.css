@@ -1,0 +1,55 @@
+:root {
+  color-scheme: light;
+  --ink: #202d28;
+  --muted: #596760;
+  --line: #dce3df;
+  --green: #14633f;
+  --highlight: #eaf5ee;
+  --error: #ad2537;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: var(--ink);
+  background: #fafcfb;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; border-top: 5px solid var(--green); }
+main { max-width: 1050px; margin: 0 auto; padding: 48px 28px 32px; }
+header { margin-bottom: 36px; }
+.eyebrow { color: var(--green); font-size: 0.85rem; font-weight: 600; margin: 0 0 12px; }
+h1 { font-family: Georgia, serif; font-size: 2.5rem; font-weight: 400; line-height: 1.15; margin: 0; }
+h2 { font-size: 1rem; font-weight: 600; margin: 0 0 16px; }
+p { line-height: 1.6; }
+.muted { color: var(--muted); font-size: 0.9rem; }
+.expenses { border-top: 1px solid var(--line); padding-top: 26px; margin-bottom: 32px; }
+.amount-input { display: flex; align-items: center; gap: 12px; max-width: 300px; }
+.amount-input span { font-size: 0.95rem; color: var(--muted); }
+input { font: inherit; color: var(--ink); background: white; border: 1px solid #9baaa1; border-radius: 4px; padding: 10px 12px; min-height: 44px; }
+#expenses { width: 100%; min-width: 0; font-size: 1.2rem; }
+input:focus-visible, .table-scroll:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+input[aria-invalid="true"] { border-color: var(--error); background: #fff6f7; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+thead { background: #f0f4f2; }
+th, td { padding: 14px 12px; border-bottom: 1px solid var(--line); text-align: right; }
+thead th { font-size: 0.8rem; font-weight: 600; vertical-align: bottom; }
+th:first-child { text-align: left; white-space: nowrap; }
+tbody th { font-weight: 500; }
+td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+td input { width: 135px; }
+.best { background: var(--highlight); }
+.best th { box-shadow: inset 3px 0 var(--green); }
+.best [data-total] { color: var(--green); font-weight: 700; }
+.result { border-bottom: 1px solid var(--line); padding: 22px 0 26px; min-height: 118px; }
+#recommendation { font-size: 1.1rem; font-weight: 600; margin: 0 0 6px; }
+#result-detail { margin: 0; }
+footer { padding-top: 28px; max-width: 760px; }
+footer h2 { font-size: 0.9rem; margin-bottom: 8px; }
+footer p { font-size: 0.9rem; margin: 8px 0; }
+
+@media (max-width: 600px) {
+  main { padding: 30px 16px 24px; }
+  h1 { font-size: 2rem; }
+  header { margin-bottom: 28px; }
+  th, td { padding: 12px 10px; }
+  table { min-width: 720px; }
+}
